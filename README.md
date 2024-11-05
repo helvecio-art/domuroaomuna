@@ -24,4 +24,4 @@ html e CSS
 ---
 
 ### Helvécio Miranda Barbosa Neto
-Estudante te Artes Visuais da Universidade Federal de Uberlândia
+Estudante de Artes Visuais da Universidade Federal de Uberlândia
