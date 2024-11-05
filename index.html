@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO MURO AO MUnA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        header {
+            background-color: rgb(116, 11, 8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            padding: 1.5em 1em;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .title-container {
+            text-align: center;
+            line-height: 1;
+        }
+        .small-text {
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: black;
+        }
+        .large-text {
+            font-weight: bold;
+            font-size: 72px;
+            letter-spacing: -2px;
+            margin-top: 10px;
+        }
+        nav {
+            margin-top: 0.5em;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+            margin-top: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .images-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         .video-grid {
+            display: grid; /* Usa o grid para dispor os vídeos */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define colunas responsivas */
+            gap: 20px; /* Espaço entre os vídeos */
+        }
+
+        .video-container {
+            border: 2px solid #ccc; /* Borda opcional */
+            border-radius: 8px; /* Cantos arredondados */
+            overflow: hidden; /* Para evitar que o conteúdo transborde */
+        }
+        video {
+            width: 100%; /* O vídeo ocupará toda a largura do contêiner */
+            height: auto; /* A altura será ajustada automaticamente */
+        }
+        .image-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 80%;
+            text-align: center;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .text {
+            margin-top: 10px;
+            color: white;
+            max-width: 80%;
+        }
+        .highlighted-title, .red-highlighted-title {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .red-highlighted-title .red-text {
+            color: rgb(116, 11, 8);
+        }
+        .city-highlighted-title {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: rgb(116, 11, 8);
+            color: white;
+            text-align: center;
+            padding: 2em 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .centered-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .image-text-wrapper {
+                width: 100%;
+            }
+            .text {
+                max-width: 100%;
+            }
+            .centered-text {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <div class="small-text">DO MURO AO</div>
+            <div class="large-text">MUnA</div>
+        </div>
+        <nav>
+            <a href="#top" onclick="scrollToTop(event)">Início</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <p>Bem-vindo ao site "DO MURO AO MUnA", este é um site dedicado ao trabalho final para a disciplina "Exposição em Contexto - Práticas no MUnA"</p>
+        <h2 class="red-highlighted-title">
+            <span class="red-text">Memorial</span> Descritivo: Acervo <span class="red-text">MUnA</span>
+        </h2>
+
+        <div class="images-container">
+            <!-- Tópico 1 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/paisagem noturna.jpeg" alt="Paisagem noturna por Emiliano Di Cavalcanti" class="image">
+                <div class="text">
+                    <p><strong>Sem título ["Paisagem noturna"], 1965</strong><br>
+                    <strong>Emiliano Di Cavalcanti</strong><br>
+                    Emiliano Di Cavalcanti, um dos maiores expoentes do modernismo brasileiro, destacou-se como pintor, ilustrador e gravurista, retratando em grande parte de sua obra a figura da mulher brasileira...</p>
+                </div>
+            </div>
+
+            <!-- Tópico 2 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/azulada1.jpeg" alt="Azulada por Lygia Eluf" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/azulada2.jpeg" alt="azulada 2" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/azulada3.jpeg" alt="azulada 3" class="image">
+                <div class="text">
+                    <p><strong>Sem título (da série “Azulada”), 2008</strong><br>
+                    <strong>Lygia Eluf</strong><br>
+                    Azulada é uma série de serigrafias que apresenta paisagens vistas a uma certa distância, construindo uma poética que explora o reconhecimento de formas ao olharmos de longe...</p>
+                </div>
+            </div>
+
+            <!-- Tópico 3 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto1.jpeg" alt="desDOBRAMENTOS da paisagem por Sandra Rey" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto2.jpeg" alt="Desdobramento 2" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto3.jpeg" alt="Desdobramento 3" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto4.jpeg" alt="Desdobramento 4" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto5.jpeg" alt="Desdobramento 5" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto6.jpeg" alt="Desdobramento 6" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto7.jpeg" alt="Desdobramento 7" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/desdobramanto8.jpeg" alt="Desdobramento 8" class="image">
+                <div class="text">
+                    <p><strong>desDOBRAMENTOS da paisagem</strong><br>
+                    <strong>Sandra Rey</strong><br>
+                    Sandra Rey desenvolve seus trabalhos a partir da fotografia e edição de imagens, explorando a relação entre arte e natureza...</p>
+                </div>
+            </div>
+            
+           <!-- Tópico 4 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/perimetrourbano1.jpeg" alt="Perímetro urbano por Valéria Menezes" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/perimetrourbano2.jpeg" alt="perimetro 2" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/perimetrourbano3.jpeg" alt="perimetro 3" class="image">
+                <div class="text">
+                    <p><strong>Perímetro urbano</strong><br>
+                    <strong>Valéria Menezes</strong><br>
+                    A obra destaca partes da cidade frequentemente esquecidas, questionando quem vive nas margens e explora a estética das favelas urbanas...</p>
+                </div>
+            </div>
+
+            <!-- Tópico 5 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/passantes1.jpeg" alt="Passantes por João Virmondes" class="image">
+            </div>
+
+             <div class="image-text-wrapper">
+                <img src="imagens/passantes2.jpeg" alt="passantes 2" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/passantes3.jpeg" alt="passantes 3" class="image">
+                <div class="text">
+                    <p><strong>Passantes</strong><br>
+                    <strong>João Virmondes</strong><br>
+                    A série fotográfica Passantes captura o movimento urbano, congelando cenas cotidianas que convidam o espectador a observar a cidade de outra forma...</p>
+                </div>
+            </div>
+
+             <!-- Registro da Cidade -->
+             <div class="city-highlighted-title">
+                <span class="red-text">Memorial</span> Descritivo: Registros da <span class="red-text">Cidade</span>
+             </div>
+
+             <div style="margin-bottom: 20px;"></div>
+
+            <!-- Tópico 6 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos1.jpeg" alt="Vestígios Urbanos por Bruno Póvoa Rodrigues" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos2.jpeg" alt="vestigios 2" class="image">
+            </div>
+
+             <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos3.jpeg" alt="vestigios 3" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos4.jpeg" alt="vestigios 4" class="image">
+            </div>
+
+             <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos5.jpeg" alt="vestigios 5" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos6.jpeg" alt="vestigios 6" class="image">
+            </div>
+
+             <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos7.jpeg" alt="vestigios 7" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos8.jpeg" alt="vestigios 8" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos9.jpeg" alt="vestigios 9" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/vestigiosurbanos10.jpeg" alt="vestigios 10" class="image">
+                <div class="text">
+                    <p><strong>Vestígios Urbanos</strong><br>
+                    <strong>Bruno Póvoa Rodrigues</strong>
+                    Fotografias em preto e branco de grafites, capturando a arte urbana que é rapidamente apagada, e preservando essas expressões transitórias...</p>
+                </div>
+            </div>
+
+            <!-- Tópico 7 -->
+            <div class="image-text-wrapper">
+                <img src="imagens/uditemfome.jpeg" alt="Udi tem fome por Bruno Póvoa Rodrigues" class="image">
+                <div class="text">
+                    <p><strong>Udi tem fome</strong><br>
+                    <strong>Bruno Póvoa Rodrigues</strong><br>
+                    Os grafites são reconhecidos pela resistência, questionando o espaço urbano e as realidades sociais contemporâneas, proporcionando uma crítica social...</p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/percepção.png" alt="percepção" class="image">
+                <div class="text">
+                    <p>“A percepção do grafite nos leva
+                     a enxergar lugares que normalmente passam despercebidos,
+                     cruzando com transeuntes, andarilhos e moradores de rua.
+                     Eles compartilham esses espaços ocupados pelos grafites,
+                     áreas muitas vezes esquecidas e
+                     negligenciadas pela cidade.”</p>
+                </div>
+            </div>
+
+            <h2 class="new-title">
+                <span class="red-text">Memorial</span> Descritivo: Murais de Artistas Convidados
+            </h2>
+            
+            <div style="margin-bottom: 20px;"></div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/abaporu.jpeg" alt="abaporu" class="image">
+                <div class="text">
+                <p><strong>Abaporu no Arraial</strong><br>
+                <strong>MuzaiArt</strong><br>
+                Como um tributo à Semana de
+                Arte Moderna de 1922 e à arte
+                de cordel nordestina. A obra faz
+                referência ao icônico Abaporu (1928), de Tarsila do Amaral,
+                combinando-o com a representação de um arraial, uma festa
+                típica brasileira. O artista utiliza
+                traços, cores e formas simples
+                para expressar uma poética lúdica e ingênua, ao mesmo tempo em que celebra a brasilidade.  </p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/tremdeonça.jpeg" alt="tremdeonça" class="image">
+                <div class="text">
+                <p><strong>Trem-de-Onça</strong><br>
+                <strong>Folye</strong><br>
+                A obra apresenta uma fusão entre a onça-pintada, um animal
+                ameaçado de extinção no Brasil,
+                e o trem Maria-Fumaça, que foi
+                fundamental para o desenvolvimento das cidades do Triângulo
+                Mineiro. Com isso, o artista critica a relação entre o crescimento
+                urbano e a destruição da fauna
+                brasileira. </p>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/tremnormal.jpeg" alt="tremnormal" class="image">
+                <div class="text">
+                <p><strong>Levando o 034 Longe</strong><br>
+                <strong>Queen</strong><br>
+                A obra da artista Amanda Fonseca, conhecida no meio do grafite como Queen, apresenta sua
+                personagem conduzindo um
+                trem de ferro, transporte responsável pelo desenvolvimento
+                das cidades do triângulo mineiro. Para associar o crescimento das cidades com a expansão
+                da arte urbana a artista grafitou
+                elementos típicos dessa arte,
+                como sua assinatura em uma
+                fonte conhecida como “bubble
+                letter”, o DDD (discagem direta
+                á distancia) de sua cidade 034,
+                entre outros elementos. </p>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/graçasadeus.jpeg" alt="graçasadeus" class="image">
+                <div class="text">
+                <p><strong>Graças a Deus</strong><br>
+                <strong>Dequete</strong><br>
+                O grafite de Dequete representa
+                um tamanduá-bandeira, animal
+                típico do Cerrado, segurando
+                um abafador usado por brigadistas no combate ao fogo. Em
+                meio a um cenário de estiagem
+                prolongada e queimadas intensas na cidade, o tamanduá parece agradecer pela chegada da
+                chuva, criando uma imagem de
+                esperança e alívio. As obras de
+                Dequete são caracterizadas pelo
+                uso expressivo das cores verde,
+                azul e laranja, que dão vida e
+                identidade ao seu trabalho, ao
+                mesmo tempo que dialogam
+                com as questões ambientais locais. </p>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/kali.jpeg" alt="kali" class="image">
+                <div class="text">
+                <p><strong>Sem Título</strong><br>
+                <strong>Kali</strong><br>
+                Kali é uma artista uberlandense
+                que se destaca na produção de
+                grafite. Em sua obra, ela se inspira no quadro Abaporu, de Tarsila
+                do Amaral, recriando-o com elementos urbanos que refletem
+                sua realidade. A pintura apresenta uma personagem azul segurando uma bomba cintilante, que remete a um estilo de
+                grafite conhecido como ‘bomb’,
+                caracterizado por letras com silhuetas arredondadas e ‘estouradas’. Ela também usa um tênis
+                rosa que lembra o modelo Shox
+                TL, popularmente conhecido
+                como “12 molas”, um símbolo
+                forte da cultura urbana e periférica no Brasil. A cena noturna é
+                iluminada por uma lua amarela,
+                e à frente da personagem está
+                a tag da artista, em um tom de
+                rosa que remete à cor dos sapatos. </p>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/wesleyundef.jpeg" alt="yundef" class="image">
+                <div class="text">
+                <p><strong>Sem Título</strong><br>
+                <strong>Wesleyundef</strong><br>
+                A obra relaciona hip hop e grafite, destacando a diversidade
+                cultural no Brasil. Desde os anos
+                1980, essas manifestações artísticas das periferias urbanas se
+                consolidaram como formas de
+                resistência e denúncia das desigualdades sociais, oferecendo
+                voz à juventude marginalizada
+                para expressar suas vivências e
+                reivindicações. O rap, com suas
+                letras impactantes, aborda temas como racismo, violência
+                e pobreza, enquanto o grafite
+                transforma muros em telas vibrantes que retratam essas realidades. Juntas, essas formas de
+                arte ocupam espaços públicos,
+                ressignificando a arte de rua e
+                fortalecendo a identidade cultural das comunidades, além
+                de impulsionar movimentos de
+                transformação social e empoderamento. </p>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/piupiu.jpeg" alt="piupiu" class="image">
+                <div class="text">
+                <p><strong>Piu Piu 100%</strong><br>
+                <strong>Desconhecido</strong><br>
+                O grafite apresentado se apropria de um ícone dos desenhos
+                animados criado por Bob Clampett em 1940, parte da famosa
+                série Looney Tunes. Essa imagem pode ser um apelido dado
+                ao autor do grafite, que utiliza
+                essa referência como tag para
+                marcar sua presença nos locais
+                onde grafita. Um dos grafites
+                com maior recorrência na cidade de Uberlândia. </p>
+            </div>
+
+            <h2 class="new-title">
+                <span class="red-text">Memorial</span> Descritivo: Área em Homenagem
+            </h2>
+            
+            <div style="margin-bottom: 20px;"></div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/acasadarainha1.jpeg" alt="acasadarainha1" class="image">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/acasadarainha2 (2).jpeg" alt="acasadarainha2" class="image">
+                <div class="text">
+                    <p><strong>A Casa da Rainha do Frango Assado</strong><br>
+                    <strong>Alex Vallauri</strong>
+                    Apresentada em 1985, a instalação A Festa da Rainha do Frango Assado foi uma das obras
+                    mais emblemáticas do artista
+                    Alex Vallauri. Composta por grafites vibrantes e provocativos, a
+                    instalação também incorporava
+                    objetos do cotidiano, como um
+                    carro, que enfatizavam a intersecção entre arte e vida doméstica. Vallauri utilizou esses elementos comuns para criticar o
+                    caráter descartável da modernidade, destacando como a sociedade contemporânea valoriza
+                    produtos e experiências efêmeras em detrimento de relações
+                    mais significativas.</p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/ossario1.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/ossario2.jpeg" width="220" height="220">
+                <div class="text">
+                    <p><strong>Ossário</strong><br>
+                    <strong>Alexandre Orion</strong>
+                    “Apresentação do documentário de Alexandre Orion Ossário
+                    e o processo completo da série.
+                    Vídeo da primeira intervenção
+                    Ossário de 300 metros no túnel
+                    Max Ferrer, São Paulo.”</p>
+                </div>
+            </div>
+
+            <h2 class="new-title">
+                <span class="red-text">Organização</span> das Obras:
+            </h2>
+            
+            <div style="margin-bottom: 20px;"></div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/1.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/2.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/3.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/4.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/5.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/6.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/7.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/8.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/9.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/10.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/11.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/12.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/13.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/14.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/15.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/16.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/17.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/18.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/19.jpeg" width="220" height="220">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="imagens/20.jpeg" width="220" height="220">
+            </div>
+
+            <div class="video-grid">
+            <div class="video-container">
+                <video controls>
+                    <source src="imagens/Videoanimacoes.mp4" type="video/mp4">
+
+        </div>
+    </main>
+
+    <footer>
+        <p class="centered-text">© 2024 DO MURO AO MUnA - Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
